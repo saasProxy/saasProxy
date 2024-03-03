@@ -1399,3 +1399,423 @@ request_verb = "POST"
     "X-Shopify-API-Version" = "2024-01"
     "X-Shopify-Webhook-Id" = "b54557e4-bdd9-4b37-8a5f-bf7d70bcd043"
     "X-Shopify-Triggered-At" = "2023-03-29T18:00:27.877041743Z"
+
+[[webhooks]]
+incoming_slug = "/api/shopify/product_listings/update"
+http_response_code = 200
+response_body = '{"product_listing":{"product_id":788032119674292900,"created_at":null,"updated_at":"2021-12-31T19:00:00-05:00","body_html":"An example T-Shirt","handle":"example-t-shirt","product_type":"Shirts","title":"Example T-Shirt","vendor":"Acme","available":false,"tags":"example, mens, t-shirt","published_at":"2021-12-31T19:00:00-05:00","variants":[{"id":642667041472714000,"title":"","option_values":[{"option_id":527050010214937800,"name":"Title","value":"Small"}],"price":"19.99","formatted_price":"$19.99","compare_at_price":"24.99","grams":200,"requires_shipping":true,"sku":"example-shirt-s","barcode":null,"taxable":true,"position":0,"available":false,"inventory_policy":"deny","inventory_quantity":0,"inventory_management":"shopify","fulfillment_service":"manual","weight":200,"weight_unit":"g","image_id":null,"created_at":null,"updated_at":null},{"id":757650484644203900,"title":"","option_values":[{"option_id":527050010214937800,"name":"Title","value":"Medium"}],"price":"19.99","formatted_price":"$19.99","compare_at_price":"24.99","grams":200,"requires_shipping":true,"sku":"example-shirt-m","barcode":null,"taxable":true,"position":0,"available":false,"inventory_policy":"deny","inventory_quantity":0,"inventory_management":"shopify","fulfillment_service":"manual","weight":200,"weight_unit":"g","image_id":null,"created_at":null,"updated_at":null}],"images":[{"id":539438707724640960,"created_at":null,"position":0,"updated_at":null,"product_id":788032119674292900,"src":"//cdn.shopify.com/shopifycloud/shopify/assets/shopify_shirt-39bb555874ecaeed0a1170417d58bbcf792f7ceb56acfe758384f788710ba635.png","variant_ids":[],"width":323,"height":434}],"options":[{"id":527050010214937800,"name":"Title","product_id":788032119674292900,"position":1,"values":["Small","Medium"]}]}}'
+request_verb = "POST"
+
+  [webhooks.headers]
+    "Content-Type" = "application/json"
+    "X-Shopify-Topic" = "product_listings/update"
+    "X-Shopify-Hmac-Sha256" = "XWmrwMey6OsLMeiZKwP4FppHH3cmAiiJJAweH5Jo4bM="
+    "X-Shopify-Shop-Domain" = "saasproxy.myshopify.com"
+    "X-Shopify-API-Version" = "2024-01"
+    "X-Shopify-Webhook-Id" = "b54557e4-bdd9-4b37-8a5f-bf7d70bcd043"
+    "X-Shopify-Triggered-At" = "2023-03-29T18:00:27.877041743Z"
+
+[[webhooks]]
+incoming_slug = "/api/shopify/products/create"
+http_response_code = 200
+response_body = '{"admin_graphql_api_id":"gid://shopify/Product/788032119674292922","body_html":"An example T-Shirt","created_at":null,"handle":"example-t-shirt","id":788032119674292900,"product_type":"Shirts","published_at":"2021-12-31T19:00:00-05:00","template_suffix":null,"title":"Example T-Shirt","updated_at":"2021-12-31T19:00:00-05:00","vendor":"Acme","status":"active","published_scope":"web","tags":"example, mens, t-shirt","variants":[],"options":[],"images":[],"image":null,"variant_ids":[]}'
+request_verb = "POST"
+
+  [webhooks.headers]
+    "Content-Type" = "application/json"
+    "X-Shopify-Topic" = "products/create"
+    "X-Shopify-Hmac-Sha256" = "XWmrwMey6OsLMeiZKwP4FppHH3cmAiiJJAweH5Jo4bM="
+    "X-Shopify-Shop-Domain" = "saasproxy.myshopify.com"
+    "X-Shopify-API-Version" = "2024-01"
+    "X-Shopify-Webhook-Id" = "b54557e4-bdd9-4b37-8a5f-bf7d70bcd043"
+    "X-Shopify-Triggered-At" = "2023-03-29T18:00:27.877041743Z"
+
+[[webhooks]]
+incoming_slug = "/api/shopify/products/delete"
+http_response_code = 200
+response_body = '{"id":788032119674292900}'
+request_verb = "POST"
+
+  [webhooks.headers]
+    "Content-Type" = "application/json"
+    "X-Shopify-Topic" = "products/delete"
+    "X-Shopify-Hmac-Sha256" = "XWmrwMey6OsLMeiZKwP4FppHH3cmAiiJJAweH5Jo4bM="
+    "X-Shopify-Shop-Domain" = "saasproxy.myshopify.com"
+    "X-Shopify-API-Version" = "2024-01"
+    "X-Shopify-Webhook-Id" = "b54557e4-bdd9-4b37-8a5f-bf7d70bcd043"
+    "X-Shopify-Triggered-At" = "2023-03-29T18:00:27.877041743Z"
+
+[[webhooks]]
+incoming_slug = "/api/shopify/products/update"
+http_response_code = 200
+response_body = '{"admin_graphql_api_id":"gid://shopify/Product/788032119674292922","body_html":"An example T-Shirt","created_at":null,"handle":"example-t-shirt","id":788032119674292900,"product_type":"Shirts","published_at":"2021-12-31T19:00:00-05:00","template_suffix":null,"title":"Example T-Shirt","updated_at":"2021-12-31T19:00:00-05:00","vendor":"Acme","status":"active","published_scope":"web","tags":"example, mens, t-shirt","variants":[],"options":[],"images":[],"image":null,"variant_ids":[]}'
+request_verb = "POST"
+
+  [webhooks.headers]
+    "Content-Type" = "application/json"
+    "X-Shopify-Topic" = "products/update"
+    "X-Shopify-Hmac-Sha256" = "XWmrwMey6OsLMeiZKwP4FppHH3cmAiiJJAweH5Jo4bM="
+    "X-Shopify-Shop-Domain" = "saasproxy.myshopify.com"
+    "X-Shopify-API-Version" = "2024-01"
+    "X-Shopify-Webhook-Id" = "b54557e4-bdd9-4b37-8a5f-bf7d70bcd043"
+    "X-Shopify-Triggered-At" = "2023-03-29T18:00:27.877041743Z"
+
+[[webhooks]]
+incoming_slug = "/api/shopify/profiles/create"
+http_response_code = 200
+response_body = '{"id":1}'
+request_verb = "POST"
+
+  [webhooks.headers]
+    "Content-Type" = "application/json"
+    "X-Shopify-Topic" = "profiles/create"
+    "X-Shopify-Hmac-Sha256" = "XWmrwMey6OsLMeiZKwP4FppHH3cmAiiJJAweH5Jo4bM="
+    "X-Shopify-Shop-Domain" = "saasproxy.myshopify.com"
+    "X-Shopify-API-Version" = "2024-01"
+    "X-Shopify-Webhook-Id" = "b54557e4-bdd9-4b37-8a5f-bf7d70bcd043"
+    "X-Shopify-Triggered-At" = "2023-03-29T18:00:27.877041743Z"
+
+[[webhooks]]
+incoming_slug = "/api/shopify/profiles/delete"
+http_response_code = 200
+response_body = '{"id":1}'
+request_verb = "POST"
+
+  [webhooks.headers]
+    "Content-Type" = "application/json"
+    "X-Shopify-Topic" = "profiles/delete"
+    "X-Shopify-Hmac-Sha256" = "XWmrwMey6OsLMeiZKwP4FppHH3cmAiiJJAweH5Jo4bM="
+    "X-Shopify-Shop-Domain" = "saasproxy.myshopify.com"
+    "X-Shopify-API-Version" = "2024-01"
+    "X-Shopify-Webhook-Id" = "b54557e4-bdd9-4b37-8a5f-bf7d70bcd043"
+    "X-Shopify-Triggered-At" = "2023-03-29T18:00:27.877041743Z"
+
+[[webhooks]]
+incoming_slug = "/api/shopify/profiles/update"
+http_response_code = 200
+response_body = '{"id":1}'
+request_verb = "POST"
+
+  [webhooks.headers]
+    "Content-Type" = "application/json"
+    "X-Shopify-Topic" = "profiles/update"
+    "X-Shopify-Hmac-Sha256" = "XWmrwMey6OsLMeiZKwP4FppHH3cmAiiJJAweH5Jo4bM="
+    "X-Shopify-Shop-Domain" = "saasproxy.myshopify.com"
+    "X-Shopify-API-Version" = "2024-01"
+    "X-Shopify-Webhook-Id" = "b54557e4-bdd9-4b37-8a5f-bf7d70bcd043"
+    "X-Shopify-Triggered-At" = "2023-03-29T18:00:27.877041743Z"
+
+[[webhooks]]
+incoming_slug = "/api/shopify/refunds/create"
+http_response_code = 200
+response_body = '{"id":890088186047892400,"order_id":820982911946154500,"created_at":null,"note":"Things were damaged","user_id":548380009,"processed_at":null,"restock":false,"duties":[],"total_duties_set":{"shop_money":{"amount":"0.00","currency_code":"USD"},"presentment_money":{"amount":"0.00","currency_code":"USD"}},"return":null,"admin_graphql_api_id":"gid://shopify/Refund/890088186047892319","refund_line_items":[{"id":866550311766439000,"quantity":1,"line_item_id":866550311766439000,"location_id":null,"restock_type":"no_restock","subtotal":199,"total_tax":0,"subtotal_set":{"shop_money":{"amount":"199.00","currency_code":"USD"},"presentment_money":{"amount":"199.00","currency_code":"USD"}},"total_tax_set":{"shop_money":{"amount":"0.00","currency_code":"USD"},"presentment_money":{"amount":"0.00","currency_code":"USD"}},"line_item":{"id":866550311766439000,"variant_id":808950810,"title":"IPod Nano - 8GB","quantity":1,"sku":"IPOD2008PINK","variant_title":null,"vendor":null,"fulfillment_service":"manual","product_id":632910392,"requires_shipping":true,"taxable":true,"gift_card":false,"name":"IPod Nano - 8GB","variant_inventory_management":"shopify","properties":[],"product_exists":true,"fulfillable_quantity":1,"grams":567,"price":"199.00","total_discount":"0.00","fulfillment_status":null,"price_set":{"shop_money":{"amount":"199.00","currency_code":"USD"},"presentment_money":{"amount":"199.00","currency_code":"USD"}},"total_discount_set":{"shop_money":{"amount":"0.00","currency_code":"USD"},"presentment_money":{"amount":"0.00","currency_code":"USD"}},"discount_allocations":[],"duties":[],"admin_graphql_api_id":"gid://shopify/LineItem/866550311766439020","tax_lines":[]}},{"id":141249953214523040,"quantity":1,"line_item_id":141249953214522980,"location_id":null,"restock_type":"no_restock","subtotal":199,"total_tax":0,"subtotal_set":{"shop_money":{"amount":"199.00","currency_code":"USD"},"presentment_money":{"amount":"199.00","currency_code":"USD"}},"total_tax_set":{"shop_money":{"amount":"0.00","currency_code":"USD"},"presentment_money":{"amount":"0.00","currency_code":"USD"}},"line_item":{"id":141249953214522980,"variant_id":808950810,"title":"IPod Nano - 8GB","quantity":1,"sku":"IPOD2008PINK","variant_title":null,"vendor":null,"fulfillment_service":"manual","product_id":632910392,"requires_shipping":true,"taxable":true,"gift_card":false,"name":"IPod Nano - 8GB","variant_inventory_management":"shopify","properties":[],"product_exists":true,"fulfillable_quantity":1,"grams":567,"price":"199.00","total_discount":"5.00","fulfillment_status":null,"price_set":{"shop_money":{"amount":"199.00","currency_code":"USD"},"presentment_money":{"amount":"199.00","currency_code":"USD"}},"total_discount_set":{"shop_money":{"amount":"5.00","currency_code":"USD"},"presentment_money":{"amount":"5.00","currency_code":"USD"}},"discount_allocations":[{"amount":"5.00","discount_application_index":0,"amount_set":{"shop_money":{"amount":"5.00","currency_code":"USD"},"presentment_money":{"amount":"5.00","currency_code":"USD"}}},{"amount":"5.00","discount_application_index":2,"amount_set":{"shop_money":{"amount":"5.00","currency_code":"USD"},"presentment_money":{"amount":"5.00","currency_code":"USD"}}}],"duties":[],"admin_graphql_api_id":"gid://shopify/LineItem/141249953214522974","tax_lines":[]}}],"transactions":[],"order_adjustments":[]}'
+request_verb = "POST"
+
+  [webhooks.headers]
+    "Content-Type" = "application/json"
+    "X-Shopify-Topic" = "refunds/create"
+    "X-Shopify-Hmac-Sha256" = "XWmrwMey6OsLMeiZKwP4FppHH3cmAiiJJAweH5Jo4bM="
+    "X-Shopify-Shop-Domain" = "saasproxy.myshopify.com"
+    "X-Shopify-API-Version" = "2024-01"
+    "X-Shopify-Webhook-Id" = "b54557e4-bdd9-4b37-8a5f-bf7d70bcd043"
+    "X-Shopify-Triggered-At" = "2023-03-29T18:00:27.877041743Z"
+
+[[webhooks]]
+incoming_slug = "/api/shopify/scheduled_product_listings/add"
+http_response_code = 200
+response_body = '{"scheduled_product_listing":{"product_id":788032119674292900,"created_at":null,"updated_at":"2021-12-31T19:00:00-05:00","body_html":"An example T-Shirt","handle":"example-t-shirt","product_type":"Shirts","title":"Example T-Shirt","vendor":"Acme","available":false,"tags":"example, mens, t-shirt","variants":[{"id":642667041472714000,"title":"","option_values":[{"option_id":527050010214937800,"name":"Title","value":"Small"}],"price":"19.99","formatted_price":"$19.99","compare_at_price":"24.99","grams":200,"requires_shipping":true,"sku":"example-shirt-s","barcode":null,"taxable":true,"position":0,"available":false,"inventory_policy":"deny","inventory_quantity":0,"inventory_management":"shopify","fulfillment_service":"manual","weight":200,"weight_unit":"g","image_id":null,"created_at":null,"updated_at":null},{"id":757650484644203900,"title":"","option_values":[{"option_id":527050010214937800,"name":"Title","value":"Medium"}],"price":"19.99","formatted_price":"$19.99","compare_at_price":"24.99","grams":200,"requires_shipping":true,"sku":"example-shirt-m","barcode":null,"taxable":true,"position":0,"available":false,"inventory_policy":"deny","inventory_quantity":0,"inventory_management":"shopify","fulfillment_service":"manual","weight":200,"weight_unit":"g","image_id":null,"created_at":null,"updated_at":null}],"publish_at":null,"images":[{"id":539438707724640960,"created_at":null,"position":0,"updated_at":null,"product_id":788032119674292900,"src":"//cdn.shopify.com/shopifycloud/shopify/assets/shopify_shirt-39bb555874ecaeed0a1170417d58bbcf792f7ceb56acfe758384f788710ba635.png","variant_ids":[],"width":323,"height":434}],"options":[{"id":527050010214937800,"name":"Title","product_id":788032119674292900,"position":1,"values":["Small","Medium"]}]}}'
+request_verb = "POST"
+
+  [webhooks.headers]
+    "Content-Type" = "application/json"
+    "X-Shopify-Topic" = "scheduled_product_listings/add"
+    "X-Shopify-Hmac-Sha256" = "XWmrwMey6OsLMeiZKwP4FppHH3cmAiiJJAweH5Jo4bM="
+    "X-Shopify-Shop-Domain" = "saasproxy.myshopify.com"
+    "X-Shopify-API-Version" = "2024-01"
+    "X-Shopify-Webhook-Id" = "b54557e4-bdd9-4b37-8a5f-bf7d70bcd043"
+    "X-Shopify-Triggered-At" = "2023-03-29T18:00:27.877041743Z"
+
+[[webhooks]]
+incoming_slug = "/api/shopify/scheduled_product_listings/remove"
+http_response_code = 200
+response_body = '{"scheduled_product_listing":{"product_id":788032119674292900}}'
+request_verb = "POST"
+
+  [webhooks.headers]
+    "Content-Type" = "application/json"
+    "X-Shopify-Topic" = "scheduled_product_listings/remove"
+    "X-Shopify-Hmac-Sha256" = "XWmrwMey6OsLMeiZKwP4FppHH3cmAiiJJAweH5Jo4bM="
+    "X-Shopify-Shop-Domain" = "saasproxy.myshopify.com"
+    "X-Shopify-API-Version" = "2024-01"
+    "X-Shopify-Webhook-Id" = "b54557e4-bdd9-4b37-8a5f-bf7d70bcd043"
+    "X-Shopify-Triggered-At" = "2023-03-29T18:00:27.877041743Z"
+
+[[webhooks]]
+incoming_slug = "/api/shopify/scheduled_product_listings/update"
+http_response_code = 200
+response_body = '{"scheduled_product_listing":{"product_id":788032119674292900,"created_at":null,"updated_at":"2021-12-31T19:00:00-05:00","body_html":"An example T-Shirt","handle":"example-t-shirt","product_type":"Shirts","title":"Example T-Shirt","vendor":"Acme","available":false,"tags":"example, mens, t-shirt","variants":[{"id":642667041472714000,"title":"","option_values":[{"option_id":527050010214937800,"name":"Title","value":"Small"}],"price":"19.99","formatted_price":"$19.99","compare_at_price":"24.99","grams":200,"requires_shipping":true,"sku":"example-shirt-s","barcode":null,"taxable":true,"position":0,"available":false,"inventory_policy":"deny","inventory_quantity":0,"inventory_management":"shopify","fulfillment_service":"manual","weight":200,"weight_unit":"g","image_id":null,"created_at":null,"updated_at":null},{"id":757650484644203900,"title":"","option_values":[{"option_id":527050010214937800,"name":"Title","value":"Medium"}],"price":"19.99","formatted_price":"$19.99","compare_at_price":"24.99","grams":200,"requires_shipping":true,"sku":"example-shirt-m","barcode":null,"taxable":true,"position":0,"available":false,"inventory_policy":"deny","inventory_quantity":0,"inventory_management":"shopify","fulfillment_service":"manual","weight":200,"weight_unit":"g","image_id":null,"created_at":null,"updated_at":null}],"publish_at":null,"images":[{"id":539438707724640960,"created_at":null,"position":0,"updated_at":null,"product_id":788032119674292900,"src":"//cdn.shopify.com/shopifycloud/shopify/assets/shopify_shirt-39bb555874ecaeed0a1170417d58bbcf792f7ceb56acfe758384f788710ba635.png","variant_ids":[],"width":323,"height":434}],"options":[{"id":527050010214937800,"name":"Title","product_id":788032119674292900,"position":1,"values":["Small","Medium"]}]}}'
+request_verb = "POST"
+
+  [webhooks.headers]
+    "Content-Type" = "application/json"
+    "X-Shopify-Topic" = "scheduled_product_listings/update"
+    "X-Shopify-Hmac-Sha256" = "XWmrwMey6OsLMeiZKwP4FppHH3cmAiiJJAweH5Jo4bM="
+    "X-Shopify-Shop-Domain" = "saasproxy.myshopify.com"
+    "X-Shopify-API-Version" = "2024-01"
+    "X-Shopify-Webhook-Id" = "b54557e4-bdd9-4b37-8a5f-bf7d70bcd043"
+    "X-Shopify-Triggered-At" = "2023-03-29T18:00:27.877041743Z"
+
+[[webhooks]]
+incoming_slug = "/api/shopify/selling_plan_groups/create"
+http_response_code = 200
+response_body = '{"admin_graphql_api_id":"gid://shopify/SellingPlanGroup/1039518940","id":1039518940,"name":"Subscribe & Save","merchant_code":"sub-n-save","admin_graphql_api_app":"gid://shopify/App/2525000003","app_id":null,"description":null,"options":["Delivery every"],"position":null,"summary":"1 delivery frequency,  discount","selling_plans":[{"name":"Pay every month deliver every month","options":["month"],"position":null,"description":null,"billing_policy":{"interval":"month","interval_count":1,"min_cycles":null,"max_cycles":null},"delivery_policy":{"interval":"month","interval_count":1,"anchors":[],"cutoff":null,"pre_anchor_behavior":"asap"},"pricing_policies":[]}],"product_variants":[],"products":[]}'
+request_verb = "POST"
+
+  [webhooks.headers]
+    "Content-Type" = "application/json"
+    "X-Shopify-Topic" = "selling_plan_groups/create"
+    "X-Shopify-Hmac-Sha256" = "XWmrwMey6OsLMeiZKwP4FppHH3cmAiiJJAweH5Jo4bM="
+    "X-Shopify-Shop-Domain" = "saasproxy.myshopify.com"
+    "X-Shopify-API-Version" = "2024-01"
+    "X-Shopify-Webhook-Id" = "b54557e4-bdd9-4b37-8a5f-bf7d70bcd043"
+    "X-Shopify-Triggered-At" = "2023-03-29T18:00:27.877041743Z"
+
+[[webhooks]]
+incoming_slug = "/api/shopify/selling_plan_groups/delete"
+http_response_code = 200
+response_body = '{"admin_graphql_api_id":"gid://shopify/SellingPlanGroup/1039518944","id":1039518944}'
+request_verb = "POST"
+
+  [webhooks.headers]
+    "Content-Type" = "application/json"
+    "X-Shopify-Topic" = "selling_plan_groups/delete"
+    "X-Shopify-Hmac-Sha256" = "XWmrwMey6OsLMeiZKwP4FppHH3cmAiiJJAweH5Jo4bM="
+    "X-Shopify-Shop-Domain" = "saasproxy.myshopify.com"
+    "X-Shopify-API-Version" = "2024-01"
+    "X-Shopify-Webhook-Id" = "b54557e4-bdd9-4b37-8a5f-bf7d70bcd043"
+    "X-Shopify-Triggered-At" = "2023-03-29T18:00:27.877041743Z"
+
+[[webhooks]]
+incoming_slug = "/api/shopify/selling_plan_groups/update"
+http_response_code = 200
+response_body = '{"admin_graphql_api_id":"gid://shopify/SellingPlanGroup/1039518938","id":1039518938,"name":"Subscribe & Save","merchant_code":"sub-n-save","admin_graphql_api_app":"gid://shopify/App/2525000003","app_id":null,"description":null,"options":["Delivery every"],"position":null,"summary":"1 delivery frequency,  discount","selling_plans":[{"name":"Pay every month deliver every month","options":["month"],"position":null,"description":null,"billing_policy":{"interval":"month","interval_count":1,"min_cycles":null,"max_cycles":null},"delivery_policy":{"interval":"month","interval_count":1,"anchors":[],"cutoff":null,"pre_anchor_behavior":"asap"},"pricing_policies":[]}],"product_variants":[],"products":[]}'
+request_verb = "POST"
+
+  [webhooks.headers]
+    "Content-Type" = "application/json"
+    "X-Shopify-Topic" = "selling_plan_groups/update"
+    "X-Shopify-Hmac-Sha256" = "XWmrwMey6OsLMeiZKwP4FppHH3cmAiiJJAweH5Jo4bM="
+    "X-Shopify-Shop-Domain" = "saasproxy.myshopify.com"
+    "X-Shopify-API-Version" = "2024-01"
+    "X-Shopify-Webhook-Id" = "b54557e4-bdd9-4b37-8a5f-bf7d70bcd043"
+    "X-Shopify-Triggered-At" = "2023-03-29T18:00:27.877041743Z"
+
+[[webhooks]]
+incoming_slug = "/api/shopify/shop/update"
+http_response_code = 200
+response_body = '{"id":548380009,"name":"Super Toys","email":"super@supertoys.com","domain":null,"province":"Tennessee","country":"US","address1":"190 MacLaren Street","zip":"37178","city":"Houston","source":null,"phone":"3213213210","latitude":null,"longitude":null,"primary_locale":"en","address2":null,"created_at":null,"updated_at":null,"country_code":"US","country_name":"United States","currency":"USD","customer_email":"super@supertoys.com","timezone":"(GMT-05:00) Eastern Time (US & Canada)","iana_timezone":null,"shop_owner":"John Smith","money_format":"${{amount}}","money_with_currency_format":"${{amount}} USD","weight_unit":"kg","province_code":"TN","taxes_included":null,"auto_configure_tax_inclusivity":null,"tax_shipping":null,"county_taxes":null,"plan_display_name":"Shopify Plus","plan_name":"enterprise","has_discounts":false,"has_gift_cards":true,"myshopify_domain":null,"google_apps_domain":null,"google_apps_login_enabled":null,"money_in_emails_format":"${{amount}}","money_with_currency_in_emails_format":"${{amount}} USD","eligible_for_payments":true,"requires_extra_payments_agreement":false,"password_enabled":null,"has_storefront":true,"finances":true,"primary_location_id":655441491,"checkout_api_supported":true,"multi_location_enabled":true,"setup_required":false,"pre_launch_enabled":false,"enabled_presentment_currencies":["USD"],"transactional_sms_disabled":false,"marketing_sms_consent_enabled_at_checkout":false}'
+request_verb = "POST"
+
+  [webhooks.headers]
+    "Content-Type" = "application/json"
+    "X-Shopify-Topic" = "shop/update"
+    "X-Shopify-Hmac-Sha256" = "XWmrwMey6OsLMeiZKwP4FppHH3cmAiiJJAweH5Jo4bM="
+    "X-Shopify-Shop-Domain" = "saasproxy.myshopify.com"
+    "X-Shopify-API-Version" = "2024-01"
+    "X-Shopify-Webhook-Id" = "b54557e4-bdd9-4b37-8a5f-bf7d70bcd043"
+    "X-Shopify-Triggered-At" = "2023-03-29T18:00:27.877041743Z"
+
+[[webhooks]]
+incoming_slug = "/api/shopify/subscription_billing_attempts/challenged"
+http_response_code = 200
+response_body = '{"id":null,"admin_graphql_api_id":null,"idempotency_key":"9a453d81-d41d-403e-806f-714dee215ff9","order_id":1,"admin_graphql_api_order_id":"gid://shopify/Order/1","subscription_contract_id":9927252808,"admin_graphql_api_subscription_contract_id":"gid://shopify/SubscriptionContract/9927252808","ready":true,"error_message":null,"error_code":null}'
+request_verb = "POST"
+
+  [webhooks.headers]
+    "Content-Type" = "application/json"
+    "X-Shopify-Topic" = "subscription_billing_attempts/challenged"
+    "X-Shopify-Hmac-Sha256" = "XWmrwMey6OsLMeiZKwP4FppHH3cmAiiJJAweH5Jo4bM="
+    "X-Shopify-Shop-Domain" = "saasproxy.myshopify.com"
+    "X-Shopify-API-Version" = "2024-01"
+    "X-Shopify-Webhook-Id" = "b54557e4-bdd9-4b37-8a5f-bf7d70bcd043"
+    "X-Shopify-Triggered-At" = "2023-03-29T18:00:27.877041743Z"
+
+[[webhooks]]
+incoming_slug = "/api/shopify/subscription_billing_attempts/failure"
+http_response_code = 200
+response_body = '{"id":null,"admin_graphql_api_id":null,"idempotency_key":"9a453d81-d41d-403e-806f-714dee215ff9","order_id":1,"admin_graphql_api_order_id":"gid://shopify/Order/1","subscription_contract_id":4289202735,"admin_graphql_api_subscription_contract_id":"gid://shopify/SubscriptionContract/4289202735","ready":true,"error_message":null,"error_code":null}'
+request_verb = "POST"
+
+  [webhooks.headers]
+    "Content-Type" = "application/json"
+    "X-Shopify-Topic" = "subscription_billing_attempts/failure"
+    "X-Shopify-Hmac-Sha256" = "XWmrwMey6OsLMeiZKwP4FppHH3cmAiiJJAweH5Jo4bM="
+    "X-Shopify-Shop-Domain" = "saasproxy.myshopify.com"
+    "X-Shopify-API-Version" = "2024-01"
+    "X-Shopify-Webhook-Id" = "b54557e4-bdd9-4b37-8a5f-bf7d70bcd043"
+    "X-Shopify-Triggered-At" = "2023-03-29T18:00:27.877041743Z"
+
+[[webhooks]]
+incoming_slug = "/api/shopify/subscription_billing_attempts/success"
+http_response_code = 200
+response_body = '{"id":null,"admin_graphql_api_id":null,"idempotency_key":"9a453d81-d41d-403e-806f-714dee215ff9","order_id":1,"admin_graphql_api_order_id":"gid://shopify/Order/1","subscription_contract_id":2189175322,"admin_graphql_api_subscription_contract_id":"gid://shopify/SubscriptionContract/2189175322","ready":true,"error_message":null,"error_code":null}'
+request_verb = "POST"
+
+  [webhooks.headers]
+    "Content-Type" = "application/json"
+    "X-Shopify-Topic" = "subscription_billing_attempts/success"
+    "X-Shopify-Hmac-Sha256" = "XWmrwMey6OsLMeiZKwP4FppHH3cmAiiJJAweH5Jo4bM="
+    "X-Shopify-Shop-Domain" = "saasproxy.myshopify.com"
+    "X-Shopify-API-Version" = "2024-01"
+    "X-Shopify-Webhook-Id" = "b54557e4-bdd9-4b37-8a5f-bf7d70bcd043"
+    "X-Shopify-Triggered-At" = "2023-03-29T18:00:27.877041743Z"
+
+[[webhooks]]
+incoming_slug = "/api/shopify/subscription_billing_cycle_edits/create"
+http_response_code = 200
+response_body = '{"subscription_contract_id":2229678888,"cycle_start_at":"2022-10-01T00:00:00-04:00","cycle_end_at":"2022-11-01T00:00:00-04:00","cycle_index":1,"contract_edit":null,"billing_attempt_expected_date":"2022-11-01T00:00:00-04:00","skipped":false,"edited":false}'
+request_verb = "POST"
+
+  [webhooks.headers]
+    "Content-Type" = "application/json"
+    "X-Shopify-Topic" = "subscription_billing_cycle_edits/create"
+    "X-Shopify-Hmac-Sha256" = "XWmrwMey6OsLMeiZKwP4FppHH3cmAiiJJAweH5Jo4bM="
+    "X-Shopify-Shop-Domain" = "saasproxy.myshopify.com"
+    "X-Shopify-API-Version" = "2024-01"
+    "X-Shopify-Webhook-Id" = "b54557e4-bdd9-4b37-8a5f-bf7d70bcd043"
+    "X-Shopify-Triggered-At" = "2023-03-29T18:00:27.877041743Z"
+
+[[webhooks]]
+incoming_slug = "/api/shopify/subscription_billing_cycle_edits/delete"
+http_response_code = 200
+response_body = '{"subscription_contract_id":8517334484,"cycle_start_at":"2022-10-01T00:00:00-04:00","cycle_end_at":"2022-11-01T00:00:00-04:00","cycle_index":1,"contract_edit":null,"billing_attempt_expected_date":"2022-11-01T00:00:00-04:00","skipped":false,"edited":false}'
+request_verb = "POST"
+
+  [webhooks.headers]
+    "Content-Type" = "application/json"
+    "X-Shopify-Topic" = "subscription_billing_cycle_edits/delete"
+    "X-Shopify-Hmac-Sha256" = "XWmrwMey6OsLMeiZKwP4FppHH3cmAiiJJAweH5Jo4bM="
+    "X-Shopify-Shop-Domain" = "saasproxy.myshopify.com"
+    "X-Shopify-API-Version" = "2024-01"
+    "X-Shopify-Webhook-Id" = "b54557e4-bdd9-4b37-8a5f-bf7d70bcd043"
+    "X-Shopify-Triggered-At" = "2023-03-29T18:00:27.877041743Z"
+
+[[webhooks]]
+incoming_slug = "/api/shopify/subscription_billing_cycle_edits/update"
+http_response_code = 200
+response_body = '{"subscription_contract_id":1153614828,"cycle_start_at":"2022-10-01T00:00:00-04:00","cycle_end_at":"2022-11-01T00:00:00-04:00","cycle_index":1,"contract_edit":null,"billing_attempt_expected_date":"2022-11-01T00:00:00-04:00","skipped":false,"edited":false}'
+request_verb = "POST"
+
+  [webhooks.headers]
+    "Content-Type" = "application/json"
+    "X-Shopify-Topic" = "subscription_billing_cycle_edits/update"
+    "X-Shopify-Hmac-Sha256" = "XWmrwMey6OsLMeiZKwP4FppHH3cmAiiJJAweH5Jo4bM="
+    "X-Shopify-Shop-Domain" = "saasproxy.myshopify.com"
+    "X-Shopify-API-Version" = "2024-01"
+    "X-Shopify-Webhook-Id" = "b54557e4-bdd9-4b37-8a5f-bf7d70bcd043"
+    "X-Shopify-Triggered-At" = "2023-03-29T18:00:27.877041743Z"
+
+[[webhooks]]
+incoming_slug = "/api/shopify/subscription_contracts/create"
+http_response_code = 200
+response_body = '{"admin_graphql_api_id":"gid://shopify/SubscriptionContract/8856838189","id":8856838189,"billing_policy":{"interval":"week","interval_count":4,"min_cycles":1,"max_cycles":2},"currency_code":"USD","customer_id":1,"admin_graphql_api_customer_id":"gid://shopify/Customer/1","delivery_policy":{"interval":"week","interval_count":2},"status":"active","admin_graphql_api_origin_order_id":"gid://shopify/Order/1","origin_order_id":1,"revision_id":"3853463437"}'
+request_verb = "POST"
+
+  [webhooks.headers]
+    "Content-Type" = "application/json"
+    "X-Shopify-Topic" = "subscription_contracts/create"
+    "X-Shopify-Hmac-Sha256" = "XWmrwMey6OsLMeiZKwP4FppHH3cmAiiJJAweH5Jo4bM="
+    "X-Shopify-Shop-Domain" = "saasproxy.myshopify.com"
+    "X-Shopify-API-Version" = "2024-01"
+    "X-Shopify-Webhook-Id" = "b54557e4-bdd9-4b37-8a5f-bf7d70bcd043"
+    "X-Shopify-Triggered-At" = "2023-03-29T18:00:27.877041743Z"
+
+[[webhooks]]
+incoming_slug = "/api/shopify/subscription_contracts/update"
+http_response_code = 200
+response_body = '{"admin_graphql_api_id":"gid://shopify/SubscriptionContract/9774641765","id":9774641765,"billing_policy":{"interval":"week","interval_count":4,"min_cycles":1,"max_cycles":2},"currency_code":"USD","customer_id":1,"admin_graphql_api_customer_id":"gid://shopify/Customer/1","delivery_policy":{"interval":"week","interval_count":2},"status":"active","admin_graphql_api_origin_order_id":"gid://shopify/Order/1","origin_order_id":1,"revision_id":"9897962619"}'
+request_verb = "POST"
+
+  [webhooks.headers]
+    "Content-Type" = "application/json"
+    "X-Shopify-Topic" = "subscription_contracts/update"
+    "X-Shopify-Hmac-Sha256" = "XWmrwMey6OsLMeiZKwP4FppHH3cmAiiJJAweH5Jo4bM="
+    "X-Shopify-Shop-Domain" = "saasproxy.myshopify.com"
+    "X-Shopify-API-Version" = "2024-01"
+    "X-Shopify-Webhook-Id" = "b54557e4-bdd9-4b37-8a5f-bf7d70bcd043"
+    "X-Shopify-Triggered-At" = "2023-03-29T18:00:27.877041743Z"
+
+[[webhooks]]
+incoming_slug = "/api/shopify/tender_transactions/create"
+http_response_code = 200
+response_body = '{"id":220982911946154500,"order_id":820982911946154500,"amount":"403.00","currency":"USD","user_id":null,"test":false,"processed_at":null,"remote_reference":"1001","payment_details":null,"payment_method":"unknown"}'
+request_verb = "POST"
+
+  [webhooks.headers]
+    "Content-Type" = "application/json"
+    "X-Shopify-Topic" = "tender_transactions/create"
+    "X-Shopify-Hmac-Sha256" = "XWmrwMey6OsLMeiZKwP4FppHH3cmAiiJJAweH5Jo4bM="
+    "X-Shopify-Shop-Domain" = "saasproxy.myshopify.com"
+    "X-Shopify-API-Version" = "2024-01"
+    "X-Shopify-Webhook-Id" = "b54557e4-bdd9-4b37-8a5f-bf7d70bcd043"
+    "X-Shopify-Triggered-At" = "2023-03-29T18:00:27.877041743Z"
+
+[[webhooks]]
+incoming_slug = "/api/shopify/themes/create"
+http_response_code = 200
+response_body = '{"id":512162865275216960,"name":"Comfort","created_at":"2021-12-31T19:00:00-05:00","updated_at":"2021-12-31T19:00:00-05:00","role":"main","theme_store_id":1234,"previewable":true,"processing":false,"admin_graphql_api_id":"gid://shopify/Theme/512162865275216980"}'
+request_verb = "POST"
+
+  [webhooks.headers]
+    "Content-Type" = "application/json"
+    "X-Shopify-Topic" = "themes/create"
+    "X-Shopify-Hmac-Sha256" = "XWmrwMey6OsLMeiZKwP4FppHH3cmAiiJJAweH5Jo4bM="
+    "X-Shopify-Shop-Domain" = "saasproxy.myshopify.com"
+    "X-Shopify-API-Version" = "2024-01"
+    "X-Shopify-Webhook-Id" = "b54557e4-bdd9-4b37-8a5f-bf7d70bcd043"
+    "X-Shopify-Triggered-At" = "2023-03-29T18:00:27.877041743Z"
+
+[[webhooks]]
+incoming_slug = "/api/shopify/themes/delete"
+http_response_code = 200
+response_body = '{"id":512162865275216960}'
+request_verb = "POST"
+
+  [webhooks.headers]
+    "Content-Type" = "application/json"
+    "X-Shopify-Topic" = "themes/delete"
+    "X-Shopify-Hmac-Sha256" = "XWmrwMey6OsLMeiZKwP4FppHH3cmAiiJJAweH5Jo4bM="
+    "X-Shopify-Shop-Domain" = "saasproxy.myshopify.com"
+    "X-Shopify-API-Version" = "2024-01"
+    "X-Shopify-Webhook-Id" = "b54557e4-bdd9-4b37-8a5f-bf7d70bcd043"
+    "X-Shopify-Triggered-At" = "2023-03-29T18:00:27.877041743Z"
+
+[[webhooks]]
+incoming_slug = "/api/shopify/themes/publish"
+http_response_code = 200
+response_body = '{"id":512162865275216960,"name":"Comfort","created_at":"2021-12-31T19:00:00-05:00","updated_at":"2021-12-31T19:00:00-05:00","role":"main","theme_store_id":1234,"previewable":true,"processing":false,"admin_graphql_api_id":"gid://shopify/Theme/512162865275216980"}'
+request_verb = "POST"
+
+  [webhooks.headers]
+    "Content-Type" = "application/json"
+    "X-Shopify-Topic" = "themes/publish"
+    "X-Shopify-Hmac-Sha256" = "XWmrwMey6OsLMeiZKwP4FppHH3cmAiiJJAweH5Jo4bM="
+    "X-Shopify-Shop-Domain" = "saasproxy.myshopify.com"
+    "X-Shopify-API-Version" = "2024-01"
+    "X-Shopify-Webhook-Id" = "b54557e4-bdd9-4b37-8a5f-bf7d70bcd043"
+    "X-Shopify-Triggered-At" = "2023-03-29T18:00:27.877041743Z"
+
+[[webhooks]]
+incoming_slug = "/api/shopify/themes/update"
+http_response_code = 200
+response_body = '{"id":512162865275216960,"name":"Comfort","created_at":"2021-12-31T19:00:00-05:00","updated_at":"2021-12-31T19:00:00-05:00","role":"main","theme_store_id":1234,"previewable":true,"processing":false,"admin_graphql_api_id":"gid://shopify/Theme/512162865275216980"}'
+request_verb = "POST"
+
+  [webhooks.headers]
+    "Content-Type" = "application/json"
+    "X-Shopify-Topic" = "themes/update"
+    "X-Shopify-Hmac-Sha256" = "XWmrwMey6OsLMeiZKwP4FppHH3cmAiiJJAweH5Jo4bM="
+    "X-Shopify-Shop-Domain" = "saasproxy.myshopify.com"
+    "X-Shopify-API-Version" = "2024-01"
+    "X-Shopify-Webhook-Id" = "b54557e4-bdd9-4b37-8a5f-bf7d70bcd043"
+    "X-Shopify-Triggered-At" = "2023-03-29T18:00:27.877041743Z"
