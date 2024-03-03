@@ -1,4 +1,15 @@
 port = 8080
+destination = "/api/webhook"
+
+[[webhooks]]
+incoming_slug = "/api/webhook"
+http_response_code = 200
+response_body = "pass-through"
+request_verb = "POST"
+
+  [webhooks.headers]
+    "Content-Type" = "application/json"
+    "Authorization" = "Bearer abc123"
 
 [[webhooks]]
 incoming_slug = "/api/webhook-1"
@@ -788,7 +799,7 @@ request_verb = "POST"
 [[webhooks]]
 incoming_slug = "/api/shopify/fulfillment_orders/fulfillment_request_rejected"
 http_response_code = 200
-response_body = '{"fulfillment_order":{"id":"gid://shopify/FulfillmentOrder/1","status":"open","request_status":"rejected"},"message":"Can\'t fulfill due to no inventory on product."}'
+response_body = '{"fulfillment_order":{"id":"gid://shopify/FulfillmentOrder/1","status":"open","request_status":"rejected"},"message":"Can not fulfill due to no inventory on product."}'
 request_verb = "POST"
 
   [webhooks.headers]

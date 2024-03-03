@@ -3,12 +3,14 @@ package saasProxy
 import (
 	"fmt"
 	log "github.com/sirupsen/logrus"
+	"io"
 	"net/http"
 )
 
 type Configuration struct {
-	Webhooks []Webhook `json:"webhooks" yaml:"webhooks" toml:"webhooks"`
-	Port     int       `json:"port" yaml:"port" toml:"port"`
+	Webhooks    []Webhook `json:"webhooks" yaml:"webhooks" toml:"webhooks"`
+	Port        int       `json:"port" yaml:"port" toml:"port"`
+	Destination string    `json:"destination" yaml:"destination" toml:"destination"`
 }
 
 type Webhook struct {
@@ -41,12 +43,39 @@ func (w *Webhook) GetResponseBody() func(http.ResponseWriter, *http.Request) {
 			"request.Method":     request.Method,
 		}).Info("saasProxy incoming request received.")
 		w.addHeadersToHandler(writer)
-		_, err := writer.Write([]byte(w.ResponseBody))
-		if err != nil {
-			handleGetResponseBodyWriterError(err, w)
-			return
+		if w.ResponseBody == "pass-through" {
+			var b []byte
+			var err error
+			b, err, done := readResponseBodyBytes(request, b, err)
+			if done {
+				return
+			}
+
+			_, err = writer.Write(b)
+			if err != nil {
+				handleGetResponseBodyWriterError(err, w)
+				return
+			}
+		} else {
+			_, err := writer.Write([]byte(w.ResponseBody))
+			if err != nil {
+				handleGetResponseBodyWriterError(err, w)
+				return
+			}
 		}
 	}
+}
+
+func readResponseBodyBytes(request *http.Request, b []byte, err error) ([]byte, error, bool) {
+	if request.Body != nil {
+		b, err = io.ReadAll(request.Body)
+		if err != nil {
+			log.Error(fmt.Sprintf("Body reading error: %v", err))
+			return nil, nil, true
+		}
+		defer request.Body.Close()
+	}
+	return b, err, false
 }
 
 func (w *Webhook) addHeadersToHandler(writer http.ResponseWriter) {
