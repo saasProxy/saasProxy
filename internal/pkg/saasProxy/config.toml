@@ -1,0 +1,21 @@
+port = 8080
+
+[[webhooks]]
+incoming_slug = "/api/webhook-1"
+http_response_code = 200
+response_body = "OK"
+request_verb = "POST"
+
+  [webhooks.headers]
+    "Content-Type" = "application/json"
+    "Authorization" = "Bearer abc123"
+
+[[webhooks]]
+incoming_slug = "/api/webhook-2"
+http_response_code = 404
+response_body = '{"error": "Not Found"}'
+request_verb = "GET"
+
+  [webhooks.headers]
+    "Content-Type" = "application/json"
+    "X-Request-ID" = "xyz789"
