@@ -38,6 +38,7 @@ func (w *Webhook) GetResponseBody() func(http.ResponseWriter, *http.Request) {
 		log.WithFields(log.Fields{
 			"request.URL.Path":   &request.URL.Path,
 			"w.HttpResponseCode": w.HttpResponseCode,
+			"request.Method":     request.Method,
 		}).Info("saasProxy incoming request received.")
 		w.addHeadersToHandler(writer)
 		_, err := writer.Write([]byte(w.ResponseBody))

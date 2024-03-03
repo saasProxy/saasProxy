@@ -17,8 +17,6 @@ func LoadConfiguration(config Configuration) Configuration {
 		}).Warn(fmt.Sprintf("saasProxy error loading %s", filePath))
 		config = Configuration{}
 	}
-	log.WithFields(log.Fields{
-		"config": config,
-	}).Info("saasProxy configuration loaded!")
+	log.Info("saasProxy configuration loaded!")
 	return config
 }
