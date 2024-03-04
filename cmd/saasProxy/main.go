@@ -34,7 +34,7 @@ func main() {
 	// Create an instance of your Config struct
 	var config saasProxy.Configuration
 
-	config = saasProxy.LoadConfiguration(config)
+	config, _ = saasProxy.LoadConfiguration("", config)
 	router := buildRouter(config)
 	server := buildServer(config, router)
 	exitStatus = listenAndServe(server, exitStatus)
