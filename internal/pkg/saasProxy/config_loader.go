@@ -11,7 +11,7 @@ import (
 func LoadConfiguration(filename string, config Configuration) (Configuration, error) {
 	// If no filename is provided, use the default path
 	if filename == "" {
-		filename = "./internal/pkg/saasProxy/config.toml"
+		filename = "./config.toml"
 	}
 
 	// Get the absolute path for better reliability
