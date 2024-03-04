@@ -1,9 +1,6 @@
 package saasProxy
 
 import (
-	_ "net/http"
-	"os"
-	"path/filepath"
 	"testing"
 
 	"github.com/stretchr/testify/assert"
@@ -12,13 +9,13 @@ import (
 func TestLoadConfiguration(t *testing.T) {
 	tests := []struct {
 		name           string
-		fileContent    string
+		tomlString     string
 		expectedConfig Configuration
 		expectedError  bool
 	}{
 		{
-			name: "Valid configuration file",
-			fileContent: `
+			name: "Valid configuration",
+			tomlString: `
 				Port = 8080
 				Destination = "/destination"
 				[[webhooks]]
@@ -63,8 +60,8 @@ func TestLoadConfiguration(t *testing.T) {
 			expectedError: false,
 		},
 		{
-			name:           "Invalid configuration file",
-			fileContent:    "invalid toml content",
+			name:           "Invalid configuration",
+			tomlString:     "invalid toml content",
 			expectedConfig: Configuration{},
 			expectedError:  true,
 		},
@@ -72,23 +69,9 @@ func TestLoadConfiguration(t *testing.T) {
 
 	for _, test := range tests {
 		t.Run(test.name, func(t *testing.T) {
-			tempDir, err := os.MkdirTemp("", "config_test")
-			assert.NoError(t, err)
-
-			// Create a temporary file within the directory
-			tempFile, err := os.Create(filepath.Join(tempDir, "config_test.toml"))
-			assert.NoError(t, err)
-
-			// Defer the removal of the temporary directory and its contents
-			defer os.RemoveAll(tempDir)
-
-			// Write the content to the file
-			_, err = tempFile.WriteString(test.fileContent)
-			assert.NoError(t, err)
-
-			// Load configuration from the temporary file
+			// Load configuration from the TOML string
 			var config Configuration
-			config, _ = LoadConfiguration("", config)
+			err := LoadConfigurationFromTomlString(test.tomlString, &config)
 
 			// Check the results
 			assert.Equal(t, test.expectedConfig, config)

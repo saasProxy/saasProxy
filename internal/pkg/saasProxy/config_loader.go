@@ -39,23 +39,16 @@ func LoadConfiguration(filename string, config Configuration) (Configuration, er
 	return config, nil
 }
 
-//import (
-//	"fmt"
-//	"github.com/BurntSushi/toml"
-//	log "github.com/sirupsen/logrus"
-//)
-//
-//func LoadConfiguration(config Configuration) Configuration {
-//	// Provide the path to your TOML file
-//	// TODO: load from ~/.saasProxy/saasProxy.toml
-//	filePath := "./internal/pkg/saasProxy/config.toml"
-//	_, err := toml.DecodeFile(filePath, &config)
-//	if err != nil {
-//		log.WithFields(log.Fields{
-//			"err": err,
-//		}).Warn(fmt.Sprintf("saasProxy error loading %s", filePath))
-//		config = Configuration{}
-//	}
-//	log.Info("saasProxy configuration loaded!")
-//	return config
-//}
+func LoadConfigurationFromTomlString(tomlString string, config *Configuration) error {
+	_, err := toml.Decode(tomlString, config)
+	if err != nil {
+		log.WithFields(log.Fields{
+			"err": err,
+		}).Warn("saasProxy error decoding TOML string")
+		*config = Configuration{}
+		return err
+	}
+
+	log.Info("saasProxy configuration loaded!")
+	return nil
+}
