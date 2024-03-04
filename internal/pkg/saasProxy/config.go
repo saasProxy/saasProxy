@@ -73,7 +73,14 @@ func readResponseBodyBytes(request *http.Request, b []byte, err error) ([]byte, 
 			log.Error(fmt.Sprintf("Body reading error: %v", err))
 			return nil, nil, true
 		}
-		defer request.Body.Close()
+		defer func(Body io.ReadCloser) {
+			err := Body.Close()
+			if err != nil {
+				log.WithFields(log.Fields{
+					"err.Error()": err.Error(),
+				}).Error("Error closing request body reader.")
+			}
+		}(request.Body)
 	}
 	return b, err, false
 }
