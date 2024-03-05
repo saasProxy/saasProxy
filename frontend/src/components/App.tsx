@@ -20,10 +20,10 @@ const App = () => {
       const result = await response();
 
       // Handle the fetched data or perform other async tasks
-      console.log('Async operation result.data', result.data);
+      console.log(`[${slug}] async operation result`, result);
       return result;
     } catch (error) {
-      console.error('Error during async operation', error);
+      console.error(`[${slug}] error during async operation`, error);
     }
   };
 
@@ -48,8 +48,12 @@ const App = () => {
             return (
               <p key={name}>
                 <b>{name}:</b> {webhook[name].toString()}
-                <br />
-                <button onClick={() => handleClick(webhook.request_verb, webhook.incoming_slug)}>{webhook.request_verb}</button>
+              </p>
+            )
+          } else if (name == "request_verb") {
+            return (
+              <p key={name}>
+                <b>{name}: </b><button onClick={() => handleClick(webhook.request_verb, webhook.incoming_slug)}>{webhook.request_verb}</button>
               </p>
             )
           } else {
