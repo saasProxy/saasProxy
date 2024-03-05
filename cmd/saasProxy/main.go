@@ -79,6 +79,8 @@ func buildServer(config saasProxy.Configuration, router *http.ServeMux) *http.Se
 
 func buildRouter(config saasProxy.Configuration) *http.ServeMux {
 	router := config.ToServeMux()
+	fs := http.FileServer(http.Dir("./web"))
+	router.Handle("/", fs)
 	log.Info("saasProxy handlers have been instantiated!")
 	return router
 }
