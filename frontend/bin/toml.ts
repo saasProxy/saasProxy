@@ -13,7 +13,7 @@ interface Options {
 const tomlJson = ({ fileUrl }: Options): any => {
   if (fileUrl) {
     const filePath = path.resolve(process.cwd(), fileUrl);
-    const outPath = "../../config.json";
+    const outPath = "./src/config/config.json";
 
     try {
       const tomlData = fs.readFileSync(filePath, 'utf-8');
