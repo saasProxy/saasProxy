@@ -1,18 +1,19 @@
 {
-  "name": "reactjs-vite-tailwindcss-boilerplate",
-  "description": "This is a boilerplate build with Vite, React 18, TypeScript, Vitest, Testing Library, TailwindCSS 3, Eslint and Prettier.",
+  "name": "saasProxy/frontend",
+  "description": "saasProxy UI",
   "version": "0.1.0",
   "private": true,
   "author": {
-    "name": "João Paulo Moraes",
-    "email": "joaopaulomoraes@outlook.com",
-    "url": "https://github.com/joaopaulomoraes"
+    "name": "wizardbeard",
+    "email": "ramonjlongiii@gmail.com",
+    "url": "https://github.com/saasProxy/saasProxy"
   },
   "bugs": {
-    "url": "https://github.com/joaopaulomoraes/reactjs-vite-tailwindcss-boilerplate/issues",
-    "email": "joaopaulomoraes@outlook.com"
+    "url": "https://github.com/saasProxy/saasProxy/issues",
+    "email": "ramonjlongiii@gmail.com"
   },
   "scripts": {
+    "toml": "npx tsc bin/toml.ts && node toml.js",
     "dev": "vite",
     "build": "tsc && vite build",
     "serve": "vite preview",
@@ -22,6 +23,7 @@
     "typecheck": "tsc --project tsconfig.json --noEmit"
   },
   "dependencies": {
+    "@iarna/toml": "^2.2.5",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
@@ -31,6 +33,7 @@
     "@types/node": "^20.11.7",
     "@types/react": "^18.2.48",
     "@types/react-dom": "^18.2.18",
+    "@types/yargs": "^17.0.32",
     "@typescript-eslint/eslint-plugin": "^6.19.1",
     "@typescript-eslint/parser": "^6.19.1",
     "@vitejs/plugin-react-swc": "^3.5.0",
@@ -46,9 +49,12 @@
     "postcss": "^8.4.33",
     "prettier": "3.1.1",
     "tailwindcss": "^3.4.1",
+    "toml-json": "^1.1.4",
+    "ts-node": "^10.9.2",
     "typescript": "^5.3.3",
     "vite": "^5.0.12",
     "vite-tsconfig-paths": "^4.3.1",
-    "vitest": "^1.2.2"
+    "vitest": "^1.2.2",
+    "yargs": "^17.7.2"
   }
 }
