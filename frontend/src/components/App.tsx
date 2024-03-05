@@ -1,8 +1,28 @@
 import Configuration from '../config/config'
+import React, { useEffect, useState } from "react";
 
 const App = () => {
+  const [data, setData] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+      const fetchData = async () => {
+        try {
+          const response = await axios.get(`http://localhost:${Configuration.port}/api/webhook-2`);
+          setData(response.data);
+        } catch (error) {
+          setError(error);
+        } finally {
+          setLoading(false);
+        }
+      };
+
+      fetchData();
+    }, []);
+
   const renderForm = () => {
-    if (!Configuration) {
+    if (!Configuration || loading) {
       return <div>Loading...</div>;
     }
 
@@ -18,10 +38,11 @@ const App = () => {
                 <b>{name}:</b> {JSON.stringify(webhook[name], null, 2)}
               </p>
             )
-          } else if (name == "some_thing_else") {
+          } else if (name == "incoming_slug") {
             return (
               <p key={name}>
                 <b>{name}:</b> {webhook[name].toString()}
+
               </p>
             )
           } else {

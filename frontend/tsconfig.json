@@ -15,8 +15,12 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
-    "types": ["vite/client", "vitest/globals", "@testing-library/jest-dom"],
+    "types": ["vite/client", "vitest/globals", "@testing-library/jest-dom"]
   },
-  "include": ["src", "src/config/config.json"],
+  "include": [
+    "src",
+    "src/config/config.json",
+    "node_modules/.pnpm/vitest@1.2.2_@types+node@20.11.7_@vitest+ui@1.2.2_happy-dom@12.10.3/node_modules/vitest/globals.d.ts"
+  ],
   "exclude": ["node_modules"]
 }
