@@ -13,7 +13,7 @@
     "email": "ramonjlongiii@gmail.com"
   },
   "scripts": {
-    "toml": "npx tsc bin/toml.ts && node toml.js",
+    "toml": "npx tsc ./bin/toml.ts && node ./bin/toml.js",
     "dev": "vite",
     "build": "tsc && vite build",
     "serve": "vite preview",

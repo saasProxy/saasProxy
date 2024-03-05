@@ -8,10 +8,9 @@ import * as process from "process";
 
 interface Options {
   fileUrl?: string;
-  data?: string;
 }
 
-const tomlJson = ({ fileUrl, data }: Options): any => {
+const tomlJson = ({ fileUrl }: Options): any => {
   if (fileUrl) {
     const filePath = path.resolve(process.cwd(), fileUrl);
     const outPath = "../../config.json";
@@ -29,7 +28,6 @@ const tomlJson = ({ fileUrl, data }: Options): any => {
         }
       });
       return jsonString;
-      // process.exit(0);
     } catch (error) {
       console.error(`Error reading or parsing the TOML file: ${error.message}`);
       process.exit(1);
@@ -51,9 +49,10 @@ const main = () => {
     })
     .demandOption(['fileUrl'])
     .help().argv;
-
-  const config = tomlJson({ fileUrl });
-  console.log(config);
+  // const config = tomlJson({ fileUrl });
+  const file: string = fileUrl || '../config.toml'
+  // const config = tomlJson({ fileUrl: file});
+  tomlJson({ fileUrl: file});
 };
 
 main();
