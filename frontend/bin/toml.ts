@@ -39,6 +39,7 @@ const tomlJson = ({ fileUrl }: Options): any => {
 };
 
 const main = () => {
+  // @ts-expect-error
   const { fileUrl } = yargs
     .options({
       fileUrl: {
@@ -47,12 +48,10 @@ const main = () => {
         type: 'string',
       },
     })
-    .demandOption(['fileUrl'])
+    // .demandOption(['fileUrl'])
     .help().argv;
-  // const config = tomlJson({ fileUrl });
   const file: string = fileUrl || '../config.toml'
-  // const config = tomlJson({ fileUrl: file});
-  tomlJson({ fileUrl: file});
+  tomlJson({ fileUrl: file });
 };
 
 main();
