@@ -94,7 +94,7 @@ const App = () => {
 
   return (
     <>
-      <Header></Header>
+      <Header />
       <div className="">
         {renderForm()}
       </div>
