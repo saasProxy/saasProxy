@@ -2,13 +2,15 @@
 
 export default {
   content: [
+    './node_modules/preline/dist/*.{ts,js}',
     './src/**/*.{mjs,js,ts,jsx,tsx}',
-    'node_modules/preline/dist/*.js',
   ],
   theme: {
     extend: {}
   },
   plugins: [
+    require('@tailwindcss/typography'),
+    require('@tailwindcss/forms'),
     require('preline/plugin'),
   ]
 }

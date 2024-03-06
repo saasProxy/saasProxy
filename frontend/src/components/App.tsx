@@ -1,11 +1,28 @@
-import Configuration from '../config/config'
+import Configuration from "../config/config";
 import React, {useEffect, useState} from "react";
-import axios from 'axios';
+// import { useLocation } from 'react-router';
+import axios from "axios";
+import "preline/preline";
+import {IStaticMethods} from "preline/preline";
+import Header from "./Header";
+
+declare global {
+  interface Window {
+    HSStaticMethods: IStaticMethods;
+  }
+}
+
 
 const App = () => {
   // const [data, setData] = useState(null);
   // const [loading, setLoading] = useState(true);
   // const [error, setError] = useState(null);
+
+  // const location = useLocation();
+  //
+  // useEffect(() => {
+  //   window.HSStaticMethods.autoInit();
+  // }, [location.pathname]);
 
   const handleClick = async (verb: string, slug: string) => {
     try {
@@ -36,51 +53,52 @@ const App = () => {
 
     return Configuration.webhooks.map((webhook) => (
       <div>
-        <h1>Webhook Configuration</h1>
-        {webhookKeys.map((name) => {
-          if (name == "headers") {
-            return (
-              <p key={name}>
-                <b>{name}:</b> {JSON.stringify(webhook[name], null, 2)}
-              </p>
-            )
-          } else if (name == "incoming_slug") {
-            return (
-              <p key={name}>
-                <b>{name}:</b> {webhook[name].toString()}
-              </p>
-            )
-          } else if (name == "request_verb") {
-            return (
-              <p key={name}>
-                <b>{name}: </b><button onClick={() => handleClick(webhook.request_verb, webhook.incoming_slug)}>{webhook.request_verb}</button>
-              </p>
-            )
-          } else {
-            return (
-              <p key={name}>
-                <b>{name}:</b> {
-                // @ts-expect-error
-                webhook[name].toString()
-              }
-              </p>
-            )
-          }
-        })}
-        <hr/>
+        <article className="prose lg:prose-sm">
+          {webhookKeys.map((name) => {
+            if (name == "headers") {
+              return (
+                <p key={name}>
+                  <b>{name}:</b> {JSON.stringify(webhook[name], null, 2)}
+                </p>
+              )
+            } else if (name == "incoming_slug") {
+              return (
+                <p key={name}>
+                  <b>{name}:</b> {webhook[name].toString()}
+                </p>
+              )
+            } else if (name == "request_verb") {
+              return (
+                <p key={name}>
+                  <b>{name}: </b>
+                  <button onClick={() => handleClick(webhook.request_verb, webhook.incoming_slug)}
+                          className={"pointer-events-auto rounded-md bg-indigo-600 px-3 py-2 text-[0.8125rem] font-semibold leading-5 text-white hover:bg-indigo-500"}>{webhook.request_verb}</button>
+                </p>
+              )
+            } else {
+              return (
+                <p key={name}>
+                  <b>{name}:</b> {
+                  // @ts-expect-error
+                  webhook[name].toString()
+                }
+                </p>
+              )
+            }
+          })}
+          <hr/>
+        </article>
       </div>
     ));
   };
 
   return (
-    <div className="">
+    <>
+      <Header></Header>
       <div className="">
-        <p><b>Port:</b> {Configuration.port}</p>
-        <p><b>Destination:</b> {Configuration.destination}</p>
-        <hr/>
         {renderForm()}
       </div>
-    </div>
+    </>
   );
 }
 
