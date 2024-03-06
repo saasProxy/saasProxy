@@ -1,3 +1,5 @@
+// TODO: move logic to internal/app
+
 package main
 
 import (
